@@ -16,19 +16,13 @@ The code depends on several Python libraries listed in `requirements.txt`. Ensur
 
 ## Setup Instructions
 
-1. **Clone the Repository**:
-   ```bash
-   git clone <repository-url>
-   cd <repository-folder>
-   ```
-
-2. **Install Required Libraries**:
+1. **Install Required Libraries**:
    Run the following command to install the necessary libraries:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Add the Dataset**:
+2. **Add the Dataset**:
    - Place the required datasets in the `Datasets` folder.
    - Ensure the dataset files match the expected format (.npz).
 
