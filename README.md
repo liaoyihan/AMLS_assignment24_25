@@ -56,11 +56,7 @@ python main.py
 ## Example Workflow
 
 ### Terminal Commands
-1. Clone and navigate to the project folder:
-   ```bash
-   git clone <repository-url>
-   cd <repository-folder>
-   ```
+1. Download the project folder, and create a virtual environment.
 
 2. Install dependencies:
    ```bash
