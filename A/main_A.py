@@ -20,7 +20,7 @@ def run_script(script_name):
             ["python", script_name],    # Command to run the Python script
             capture_output=True,        # Capture both stdout and stderr
             text=True,                  # Decode the output to a string format
-            check=True
+            check=True                  # Raise an exception if the command fails
         )
         return result.stdout   # Return the standard output of the script
     except subprocess.CalledProcessError as e:
