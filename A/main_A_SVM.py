@@ -11,14 +11,14 @@ data = np.load(file_path) # Load the .npz dataset into a structured numpy object
 
 # **Step 2: Extract data from the dataset**
 # Extract training, validation, and test images
-train_images = data['train_images']
-val_images = data['val_images']
-test_images = data['test_images']
+train_images = data['train_images']  # Extract the array of training images from the dataset
+val_images = data['val_images']      # Extract the array of validation images from the dataset
+test_images = data['test_images']    # Extract the array of test images from the dataset
 
 # Extract corresponding labels and flatten them (convert from 2D to 1D arrays)
-train_labels = data['train_labels'].ravel()   # Flatten to 1D array
-val_labels = data['val_labels'].ravel()
-test_labels = data['test_labels'].ravel()
+train_labels = data['train_labels'].ravel()   # Convert training labels to a 1D array
+val_labels = data['val_labels'].ravel()       # Convert validation labels to a 1D array
+test_labels = data['test_labels'].ravel()     # Convert test labels to a 1D array
 
 # **Step 3: Preprocess the image data**
 # Flatten the images (e.g., 28x28 images are converted to 784 feature vectors per image)
