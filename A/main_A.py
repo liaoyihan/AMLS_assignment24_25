@@ -17,7 +17,10 @@ def run_script(script_name):
     try:
         # Use subprocess to run the script and capture its output
         result = subprocess.run(
-            ["python", script_name], capture_output=True, text=True, check=True
+            ["python", script_name],    # Command to run the Python script
+            capture_output=True,        # Capture both stdout and stderr
+            text=True,                  # Decode the output to a string format
+            check=True
         )
         return result.stdout   # Return the standard output of the script
     except subprocess.CalledProcessError as e:
