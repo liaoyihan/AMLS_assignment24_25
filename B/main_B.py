@@ -101,11 +101,11 @@ if __name__ == "__main__":
     print("Running ResNet50 training...")
     resnet_output_file = "./results/task_B_result/resnet_epoch_results.csv"
     # Read the test accuracy from the output CSV file
-    if os.path.exists(resnet_output_file):
+    if os.path.exists(resnet_output_file):  # Check if the ResNet50 results file exists
         # Read last epoch's accuracy
-        resnet_df = pd.read_csv(resnet_output_file)
-        results["CNN_resnet"] = resnet_df.iloc[-1]["test_accuracy"]
-        print(f"CNN (ResNet50) Test Accuracy: {results['CNN_resnet']}")
+        resnet_df = pd.read_csv(resnet_output_file)  # Load the CSV file into a DataFrame
+        results["CNN_resnet"] = resnet_df.iloc[-1]["test_accuracy"]  # Extract the test accuracy from the last row
+        print(f"CNN (ResNet50) Test Accuracy: {results['CNN_resnet']}")  # Print the extracted accuracy
 
     # Step 4: Run SVM and K-NN scripts and record their results
     scripts = {
