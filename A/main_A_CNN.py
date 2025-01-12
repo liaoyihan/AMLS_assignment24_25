@@ -27,8 +27,8 @@ def category_Data(dataset):
     test_labels = dataset['test_labels']    # Extract test labels
 
     # Print the dimensions of each data subset to confirm the integrity of the dataset
-    print("Train Images Shape:", train_images.shape)
-    print("Train Labels Shape:", train_labels.shape)
+    print("Train Images Shape:", train_images.shape)  # Shape of training images (e.g., (num_samples, height, width))
+    print("Train Labels Shape:", train_labels.shape)    # Shape of training labels (e.g., (num_samples,))
     print("\nValidation Images Shape:", val_images.shape)
     print("Validation Labels Shape:", val_labels.shape)
     print("\nTest Images Shape:", test_images.shape)
