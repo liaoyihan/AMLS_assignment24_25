@@ -2,6 +2,29 @@
 
 This repository contains Python scripts for training and evaluating machine learning and deep learning models for medical image classification tasks. The project is designed to work on **Windows systems** and requires specific libraries, datasets, and configurations to run successfully.
 
+## Project Structure
+
+```
+├── A/                          # Task A: Binary Classification Scripts
+│   ├── main_A.py               # Controller script for Task A
+│   ├── main_A_CNN.py           # Custom CNN implementation
+│   ├── main_A_SVM.py           # SVM implementation
+│   ├── main_A_K_NN.py          # K-NN implementation
+├── B/                          # Task B: Multi-Class Classification Scripts
+│   ├── main_B.py               # Controller script for Task B
+│   ├── main_B_CNN.py           # Custom CNN and ResNet50 implementation
+│   ├── main_B_SVM.py           # SVM implementation
+│   ├── main_B_K_NN.py          # K-NN implementation
+├── Datasets/                   # Input datasets for Task A and Task B
+├── images/                     # Folder for saved plots and visualizations
+├── results/                    # Folder for combined results (CSV files, performance metrics)
+├── main.py                     # Main entry point for the project
+├── README.md                   # Project description and instructions
+└── requirements.txt            # Python dependencies
+```
+
+
+
 ---
 
 ## Prerequisites
