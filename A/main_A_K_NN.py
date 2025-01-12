@@ -17,12 +17,12 @@ def load_data(file_path):
     """
     # Load the dataset from the provided .npz file
     dataset = np.load(file_path)
-    train_images = dataset['train_images']
-    train_labels = dataset['train_labels']
-    val_images = dataset['val_images']
-    val_labels = dataset['val_labels']
-    test_images = dataset['test_images']
-    test_labels = dataset['test_labels']
+    train_images = dataset['train_images']  # Training images (e.g., shape: (num_samples, height, width))
+    train_labels = dataset['train_labels']  # Training labels corresponding to the training images
+    val_images = dataset['val_images']  # Validation images used to evaluate the model during training
+    val_labels = dataset['val_labels']  # Validation labels corresponding to the validation images
+    test_images = dataset['test_images']  # Test images used to evaluate the final performance of the model
+    test_labels = dataset['test_labels']  # Test labels corresponding to the test images
     # Return all subsets for further processing
     return train_images, train_labels, val_images, val_labels, test_images, test_labels
 
