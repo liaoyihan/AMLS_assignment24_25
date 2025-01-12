@@ -11,9 +11,9 @@ data = np.load(file_path)  # Load the .npz dataset into a structured numpy objec
 
 # **Step 2: Extract data from the dataset**
 # Extract training, validation, and test images
-train_images = data['train_images']
-val_images = data['val_images']
-test_images = data['test_images']
+train_images = data['train_images']  # Load the training images from the dataset
+val_images = data['val_images']  # Load the validation images from the dataset
+test_images = data['test_images']  # Load the test images from the dataset
 
 # Extract corresponding labels and flatten them (convert from 2D to 1D arrays)
 train_labels = data['train_labels'].ravel()  # Flatten to 1D array
