@@ -19,12 +19,12 @@ def load_data(file_path):
     dataset = np.load(file_path)
     
     # Extract training, validation, and test subsets
-    train_images = dataset['train_images']
-    train_labels = dataset['train_labels']
-    val_images = dataset['val_images']
-    val_labels = dataset['val_labels']
-    test_images = dataset['test_images']
-    test_labels = dataset['test_labels']
+    train_images = dataset['train_images']  # Training images (e.g., shape: (num_samples, height, width))
+    train_labels = dataset['train_labels']  # Training labels corresponding to the training images
+    val_images = dataset['val_images']      # Validation images used to monitor model performance during training
+    val_labels = dataset['val_labels']      # Validation labels corresponding to the validation images
+    test_images = dataset['test_images']    # Test images for evaluating the final model performance
+    test_labels = dataset['test_labels']    # Test labels corresponding to the test images
     
     # Return the data as separate variables
     return train_images, train_labels, val_images, val_labels, test_images, test_labels
