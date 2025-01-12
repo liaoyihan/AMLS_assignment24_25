@@ -48,12 +48,12 @@ def train_model(train_images_normalized, val_images_normalized, test_images_norm
 
     # Evaluate the model on the test dataset
     test_loss, test_accuracy = model.evaluate( test_images_normalized, test_labels_cat)
-    print("Test Loss:", test_loss)
-    print("Test Accuracy:", test_accuracy)
+    print("Test Loss:", test_loss)  # Print the final loss on the test dataset
+    print("Test Accuracy:", test_accuracy)   # Print the final accuracy on the test dataset
 
     # Save epoch-wise results and plot training progress
-    save_epoch_results(history, test_loss, test_accuracy, "CNN_Custom")
-    return history
+    save_epoch_results(history, test_loss, test_accuracy, "CNN_Custom")  # Save results and generate a plot of training progress
+    return history   # Return the training history object for further analysis
 
 
 def save_epoch_results(history, test_loss, test_accuracy, model_name):
