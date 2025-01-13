@@ -114,14 +114,14 @@ if __name__ == "__main__":
         "K-NN": "./A/main_A_K_NN.py", # Path to the K-NN script
     }
     # Execute each script and capture its output
-    for method, script in scripts.items():
-        print(f"Running {method} script: {script}")
+    for method, script in scripts.items():  # Iterate over each method and its corresponding script
+        print(f"Running {method} script: {script}")   # Inform the user about the script being executed
         output = run_script(script)  # Run the script and get its output
-        if output:
+        if output:  # Check if the script executed successfully and returned output
             accuracy = extract_accuracy(output)  # Extract accuracy from the script output
-            if accuracy is not None:
-                results[method] = accuracy
-                print(f"{method} Test Accuracy: {accuracy}")
+            if accuracy is not None:  # If accuracy was successfully extracted
+                results[method] = accuracy   # Store the accuracy in the `results` dictionary
+                print(f"{method} Test Accuracy: {accuracy}")  # Print the test accuracy for the method
             else:
                 print(f"Failed to extract accuracy for {method}.")
         else:
