@@ -29,10 +29,10 @@ def category_Data(dataset):
     # Print the dimensions of each data subset to confirm the integrity of the dataset
     print("Train Images Shape:", train_images.shape)  # Shape of training images (e.g., (num_samples, height, width))
     print("Train Labels Shape:", train_labels.shape)    # Shape of training labels (e.g., (num_samples,))
-    print("\nValidation Images Shape:", val_images.shape)
-    print("Validation Labels Shape:", val_labels.shape)
-    print("\nTest Images Shape:", test_images.shape)
-    print("Test Labels Shape:", test_labels.shape)
+    print("\nValidation Images Shape:", val_images.shape)  # Outputs the dimensions of the validation images.
+    print("Validation Labels Shape:", val_labels.shape)  # Outputs the dimensions of the validation labels.
+    print("\nTest Images Shape:", test_images.shape)  # Outputs the dimensions of the test images.
+    print("Test Labels Shape:", test_labels.shape)  # Outputs the dimensions of the test labels.
 
     return train_images, train_labels, val_images, val_labels, test_images, test_labels
 
