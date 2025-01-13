@@ -50,10 +50,12 @@ test_predictions = svm_model.predict(X_test)
 # **Step 6: Display results**
 # Print classification report for validation data
 print("Validation Set Results:")
+# Display a header indicating that the following results are for the validation dataset
 print(classification_report(val_labels, val_predictions))
 
 # Print classification report for test data
 print("Test Set Results:")
+# Display a header indicating that the following results are for the test dataset
 print(classification_report(test_labels, test_predictions))
 
 # Calculate and display accuracy for validation and test sets
