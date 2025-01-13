@@ -22,7 +22,11 @@ def train_model(train_images_normalized, val_images_normalized, test_images_norm
     # creat the model
     model = Sequential([
         #hidden layer one with input layer of 28*28*3
-        Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=(28, 28, 3), kernel_regularizer=l2(0.001)),
+        Conv2D(32,  # Number of filters in the convolutional layer
+               kernel_size=(3, 3),  # Size of the filter kernel (3x3 pixels)
+               activation='relu',    # Use ReLU activation to introduce non-linearity
+               input_shape=(28, 28, 3),  # Input shape: 28x28 images with 3 channels (RGB)
+               kernel_regularizer=l2(0.001)),  # L2 regularization to prevent overfitting
         MaxPooling2D(pool_size=(2, 2)),
         #hidden layer 2
         Conv2D(64, (3, 3), activation='relu', kernel_regularizer=l2(0.001)),
