@@ -23,7 +23,7 @@ def load_data(file_path):
     val_labels = dataset['val_labels']  # Validation labels corresponding to the validation images
     test_images = dataset['test_images']  # Test images used to evaluate the final performance of the model
     test_labels = dataset['test_labels']  # Test labels corresponding to the test images
-    # Return all subsets for further processing
+    # Return the extracted training, validation, and test datasets
     return train_images, train_labels, val_images, val_labels, test_images, test_labels
 
 # **2. Data Preprocessing**
