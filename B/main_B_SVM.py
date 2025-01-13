@@ -22,9 +22,9 @@ test_labels = data['test_labels'].ravel()
 
 # **Step 3: Preprocess the image data**
 # Flatten the images (e.g., 28x28 images to 784 feature vectors per image)
-X_train = train_images.reshape(train_images.shape[0], -1)
-X_val = val_images.reshape(val_images.shape[0], -1)
-X_test = test_images.reshape(test_images.shape[0], -1)
+X_train = train_images.reshape(train_images.shape[0], -1) # Reshape the training images
+X_val = val_images.reshape(val_images.shape[0], -1) # Reshape the validation images in the same way as the training images.
+X_test = test_images.reshape(test_images.shape[0], -1) # Reshape the test images to match the format of training and validation images.
 
 # Normalize the pixel values to have zero mean and unit variance
 # StandardScaler scales each feature to a mean of 0 and a standard deviation of 1
