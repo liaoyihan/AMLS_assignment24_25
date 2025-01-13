@@ -62,8 +62,9 @@ def plot_results(results, output_path):
     accuracies = list(results.values())
     
     # Create a bar chart to display the accuracies
-    plt.figure(figsize=(10, 6))
+    plt.figure(figsize=(10, 6))  # Set the figure size to make the chart more readable
     plt.bar(methods, accuracies, color=['blue', 'green', 'orange', 'purple'])
+    # Add a title to the chart
     plt.title("Test Accuracies of CNN (Custom), CNN (ResNet50), SVM, and K-NN")
     plt.ylabel("Accuracy")
     plt.ylim(0, 1)  # Set y-axis range to [0, 1] for better visualization
