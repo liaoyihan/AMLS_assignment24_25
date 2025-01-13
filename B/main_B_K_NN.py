@@ -41,9 +41,9 @@ def preprocess_data(train_images, val_images, test_images):
         Tuple: Preprocessed training, validation, and test data.
     """
     # Flatten the images (28x28 -> 784)
-    train_images_flattened = train_images.reshape(train_images.shape[0], -1)
-    val_images_flattened = val_images.reshape(val_images.shape[0], -1)
-    test_images_flattened = test_images.reshape(test_images.shape[0], -1)
+    train_images_flattened = train_images.reshape(train_images.shape[0], -1) # Flatten the images from 2D arrays into 1D feature vectors
+    val_images_flattened = val_images.reshape(val_images.shape[0], -1) # Reshape the validation images similarly to the training images.
+    test_images_flattened = test_images.reshape(test_images.shape[0], -1) # Reshape the test images to 1D arrays for compatibility with models that expect feature vectors.
     
     # Normalize pixel values to [0, 1]
     scaler = StandardScaler()
