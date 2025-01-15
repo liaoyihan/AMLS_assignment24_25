@@ -48,7 +48,7 @@ The code depends on several Python libraries listed in `requirements.txt`. Ensur
       ```
     This is for activate the virtual environment:
       ```bash
-      .\.venv\Acripts\activate      
+      .\.venv\Scripts\activate      
       ```
 After activate the virtual environment, you can install the following libraries as the instruction shown below:
 
