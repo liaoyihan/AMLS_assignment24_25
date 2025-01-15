@@ -42,14 +42,14 @@ The code depends on several Python libraries listed in `requirements.txt`. Ensur
 1. **Download the code to create a Virsual environment**:
    If your computer is a Windows system, Run the following command in the terminal one by one to create an virtual environment:
 
-This is for creating an empty virtual environment:
-   ```bash
-   python -m venv .venv     
-   ```
-This is for activate the virtual environment:
-   ```bash
-   .\.venv\Acripts\activate      
-   ```
+    This is for creating an empty virtual environment:
+      ```bash
+      python -m venv .venv     
+      ```
+    This is for activate the virtual environment:
+      ```bash
+      .\.venv\Acripts\activate      
+      ```
 After activate the virtual environment, you can install the following libraries as the instruction shown below:
 
 3. **Install Required Libraries**:
