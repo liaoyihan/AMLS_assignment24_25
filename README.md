@@ -39,16 +39,26 @@ The code depends on several Python libraries listed in `requirements.txt`. Ensur
 
 ## Setup Instructions
 
-1. **Download the code create a Virsual environment**:
-  
+1. **Download the code to create a Virsual environment**:
+   If your computer is a Windows system, Run the following command in the terminal one by one to create an virtual environment:
 
-2. **Install Required Libraries**:
+This is for creating an empty virtual environment:
+   ```bash
+   python -m venv .venv     
+   ```
+This is for activate the virtual environment:
+   ```bash
+   .\.venv\Acripts\activate      
+   ```
+After activate the virtual environment, you can install the following libraries as the instruction shown below:
+
+3. **Install Required Libraries**:
    Run the following command to install the necessary libraries:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Add the Dataset**:
+4. **Add the Dataset**:
    - Place the required datasets in the `Datasets` folder. 
    - Ensure the dataset files match the expected format (.npz).
 
