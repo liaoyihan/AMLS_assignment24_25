@@ -64,9 +64,9 @@ def enhanced_data(train_images, train_labels):
             image = image.transpose(Image.FLIP_LEFT_RIGHT)
             
         # Random rotation within the range [-30, 30] degrees
-        rotation_angle = random.randint(-30, 30)
-        image = image.rotate(rotation_angle)
-        enhancer = ImageEnhance.Brightness(image)
+        rotation_angle = random.randint(-30, 30)  # Generate a random rotation angle between -30 and 30 degrees
+        image = image.rotate(rotation_angle)  # Rotate the image by the selected angle
+        enhancer = ImageEnhance.Brightness(image)  # Create a brightness enhancer for the rotated image
         brightness_factor = random.uniform(0.8, 1.2) # Brightness scale factor
         image = enhancer.enhance(brightness_factor)
         
