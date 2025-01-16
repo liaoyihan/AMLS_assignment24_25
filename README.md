@@ -89,22 +89,7 @@ python main.py
 
 ---
 
-## Example Workflow
 
-### Terminal Commands
-1. Download the code, create a Virsual environemnt
-
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Add datasets to the `Datasets` folder.
-
-4. Run the code:
-   ```bash
-   python main.py
-   ```
 
 ---
 
