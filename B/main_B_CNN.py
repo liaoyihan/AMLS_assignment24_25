@@ -57,7 +57,33 @@ def train_model(train_images_normalized, val_images_normalized, test_images_norm
 
     # Save epoch-wise results and plot training progress
     save_epoch_results(history, test_loss, test_accuracy, "CNN_Custom")  # Save results and generate a plot of training progress
+    
+        # Plotting the accuracy and loss graphs side by side
+    plt.figure(figsize=(12, 4))  # Set the figure size (width: 12, height: 4)
+
+    # Plot accuracy over epochs
+    plt.subplot(1, 2, 1)   # Create the first subplot (1 row, 2 columns, position 1)
+    plt.plot(history.history['accuracy'], label='Train Accuracy')  # Plot training accuracy
+    plt.plot(history.history['val_accuracy'], label='Validation Accuracy')  # Plot validation accuracy
+    plt.title('Accuracy over Epochs')  # Add a title to the plot
+    plt.xlabel('Epoch')  # Label for the x-axis
+    plt.ylabel('Accuracy')  # Label for the y-axis
+    plt.legend()  # Add a legend to differentiate between training and validation accuracy
+
+    # Plot loss over epochs
+    plt.subplot(1, 2, 2)  # Create the second subplot (1 row, 2 columns, position 2)
+    plt.plot(history.history['loss'], label='Train Loss')   # Plot training loss
+    plt.plot(history.history['val_loss'], label='Validation Loss')   # Plot validation loss
+    plt.title('Loss over Epochs')  # Add a title to the plot
+    plt.xlabel('Epoch')  # Label for the x-axis
+    plt.ylabel('Loss') # Label for the y-axis
+    plt.legend()  # Add a legend to differentiate between training and validation loss
+
+    plt.suptitle("The result of the Customised-CNN model",fontsize=16)   # Larger font size for emphasis
+    plt.savefig("./images/task_B/Training and testing CNN training.png")   # Save the plot to a specified file path
+    
     return history   # Return the training history object for further analysis
+
 
 
 def save_epoch_results(history, test_loss, test_accuracy, model_name):
@@ -86,34 +112,6 @@ def save_epoch_results(history, test_loss, test_accuracy, model_name):
     # Save the DataFrame to a CSV file
     history_df.to_csv(results_file, index=False)
     print(f"{model_name} training and test results saved to {results_file}")
-
-    # Plot and save the training progress (accuracy and loss over epochs)
-    plot_training_progress(history, model_name,output_path="./images/task_B")
-
-
-    # Plotting the accuracy and loss graphs side by side
-    plt.figure(figsize=(12, 4))  # Set the figure size (width: 12, height: 4)
-
-    # Plot accuracy over epochs
-    plt.subplot(1, 2, 1)   # Create the first subplot (1 row, 2 columns, position 1)
-    plt.plot(history.history['accuracy'], label='Train Accuracy')  # Plot training accuracy
-    plt.plot(history.history['val_accuracy'], label='Validation Accuracy')  # Plot validation accuracy
-    plt.title('Accuracy over Epochs')  # Add a title to the plot
-    plt.xlabel('Epoch')  # Label for the x-axis
-    plt.ylabel('Accuracy')  # Label for the y-axis
-    plt.legend()  # Add a legend to differentiate between training and validation accuracy
-
-    # Plot loss over epochs
-    plt.subplot(1, 2, 2)  # Create the second subplot (1 row, 2 columns, position 2)
-    plt.plot(history.history['loss'], label='Train Loss')   # Plot training loss
-    plt.plot(history.history['val_loss'], label='Validation Loss')   # Plot validation loss
-    plt.title('Loss over Epochs')  # Add a title to the plot
-    plt.xlabel('Epoch')  # Label for the x-axis
-    plt.ylabel('Loss') # Label for the y-axis
-    plt.legend()  # Add a legend to differentiate between training and validation loss
-
-    plt.suptitle("The result of the Customised-CNN model",fontsize=16)   # Larger font size for emphasis
-    plt.savefig("./images/task_B/Training and testing CNN training.png")   # Save the plot to a specified file path
     return history
 
 
