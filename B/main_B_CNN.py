@@ -58,7 +58,7 @@ def train_model(train_images_normalized, val_images_normalized, test_images_norm
     # Save epoch-wise results and plot training progress
     save_epoch_results(history, test_loss, test_accuracy, "CNN_Custom")  # Save results and generate a plot of training progress
     
-        # Plotting the accuracy and loss graphs side by side
+    # Plotting the accuracy and loss graphs side by side
     plt.figure(figsize=(12, 4))  # Set the figure size (width: 12, height: 4)
 
     # Plot accuracy over epochs
