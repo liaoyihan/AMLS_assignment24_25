@@ -87,11 +87,7 @@ python main.py
 2. **Visualizations**:
    - Plots of training and validation performance are saved in the `images` folder.
 
----
 
-
-
----
 
 ## Notes
 - Ensure that the `Datasets` folder contains the correct dataset files before running the code.
